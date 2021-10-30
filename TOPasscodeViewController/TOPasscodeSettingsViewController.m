@@ -196,7 +196,7 @@ const CGFloat kTOPasscodeKeypadMaxHeight = 330.0f;
     BOOL variableSizePasscode = (type >= TOPasscodeTypeCustomNumeric);
 
     // Update the visibility of the options button
-    self.optionsButton.hidden = !(state == TOPasscodeSettingsViewStateEnterNewPasscode);
+    self.optionsButton.hidden = !(state == TOPasscodeSettingsViewStateEnterNewPasscode) || !_canChangePasswordType;
 
     // Clear the input view
     self.inputField.passcode = nil;
